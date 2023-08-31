@@ -15,6 +15,7 @@ import { createApp } from 'vue';
 
 const app = createApp({});
 
+// aqui importamos el componente y que funcione en la aplicacion, porque se utilizara un poco de javascript
 
 import gestiontokenComponent from './components/gestiontokenComponent.vue';
 

@@ -184,6 +184,7 @@ return [
     | the aliases are "lazy" loaded so they don't hinder performance.
     |
     */
+    // para la configuracion del JWT,  teniamos ingrear estas lineas segun la documentacion, en caso que el comando se demore mucho en ejecutar
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,

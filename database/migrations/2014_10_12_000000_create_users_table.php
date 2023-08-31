@@ -11,6 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
+        // Aqui es donde migramos la tabla, en este caso conectamos la tabla del 
+        //usario con el parametro de nombre, correo, contraseña y el rol
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');

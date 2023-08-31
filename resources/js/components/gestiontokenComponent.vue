@@ -1,4 +1,5 @@
 <template>
+    <!-- ese es el componente que tendra la vista del inicio de sesion del token -->
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
@@ -79,6 +80,7 @@ export default {
     },
     data() {
         return {
+            // estas son las variables y el metodo, que creamos para crear el token
 
             tokens: '',
             usuarioto: [],
@@ -88,12 +90,15 @@ export default {
     },
 
     methods: {
+    // estos son los metodos , en este caso el metodo de generar el token cuando ingresamos por la pantalla del token
         generartoken() {
 
             axios.post('/generate-token', this.creartoken).then(res => {
 
                 this.tokens = res.data.model;
                 if (res.data.status  ) {
+                    // aqui creamos un boton el cual nos ayudara a dirigirnos para conectarse con la aplicacion principal
+                    // y con el token generado para su autenticacion
 
                     Swal.fire({
                         title: '¡Inicia sesión!',
@@ -129,7 +134,7 @@ export default {
             });
 
         },
-
+// este metodo nos ayuda para mostrar el token
         mostrartoken() {
 
             axios.get('/mostrartoken/mostrarto').then(res => {

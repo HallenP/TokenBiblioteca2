@@ -22,7 +22,8 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-
+            // creamos un parametro el cual al ser corrido con el comando de seeder, ese usuario,
+            // contraseña y rol estaran por defecto al iniciar sesion, tambien encryptamos la contraseña con el Hash
         User::create([
             'name' => 'hallen',
             

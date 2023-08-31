@@ -11,7 +11,10 @@ use Tymon\JWTAuth\Contracts\JWTSubject;
 
 class User extends Authenticatable implements JWTSubject
 {
+
     use HasApiTokens, HasFactory, Notifiable;
+
+    // Este es el modelo User, el cual tendra los parametros de nombre, email y contraseña, para la generacion del token
 
     /**
      * The attributes that are mass assignable.
@@ -45,11 +48,12 @@ class User extends Authenticatable implements JWTSubject
     ];
 
     // ... //
+    //nos ayudamos de esta funcion para la identificacion del JWT, debido a la documentacion de la libreria JWTAuth
     public function getJWTIdentifier()
     {
     	return $this->getKey();
     }
-
+// en esta funcion de igual manera, es un metodo para la lista del JWt con la libreria del JWTAuth
     public function getJWTCustomClaims()
     {
     	return [];

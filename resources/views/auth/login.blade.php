@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<!-- ESTA ES NUESTRA VISTA LA CUAL CONTENDRA EL COMPONENTE DEL TOKEN, ES DECIR DE AUI LLAMAMOS AL USUARIO Y CONTRASEÑA DEL TOKEN-->
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -9,6 +10,7 @@
 
 
                 <div id="app">
+                    <!-- En esta parte llamamos al componente del token-->
                 <gestiontoken-component></gestiontoken-component>
                     </div>
                 
